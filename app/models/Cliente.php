@@ -5,7 +5,7 @@ require_once __DIR__ . '/../config/database.php';
 class Cliente
 {
     /* =====================================================
-       LISTAGEM COM CONTAGEM DE SERVIÇOS
+       LISTAGEM
     ===================================================== */
 
     public static function paginate($search = '', $limit = 10, $offset = 0)
@@ -25,29 +25,14 @@ class Cliente
         $sql = "
             SELECT 
                 c.*,
-
                 COUNT(cs.id) AS total_servicos,
-
-                COALESCE(
-                    SUM(
-                        CASE 
-                            WHEN cs.ativo = 1 THEN 1 
-                            ELSE 0 
-                        END
-                    ), 0
-                ) AS servicos_ativos
-
+                COALESCE(SUM(CASE WHEN cs.ativo = 1 THEN 1 ELSE 0 END),0) AS servicos_ativos
             FROM clientes c
-
             LEFT JOIN clientes_servicos cs 
                 ON cs.cliente_id = c.id
-
             {$where}
-
             GROUP BY c.id
-
             ORDER BY c.id DESC
-
             LIMIT :limit OFFSET :offset
         ";
 
@@ -61,7 +46,6 @@ class Cliente
         $stmt->bindValue(':offset', (int)$offset, PDO::PARAM_INT);
 
         $stmt->execute();
-
         return $stmt->fetchAll();
     }
 
@@ -92,7 +76,7 @@ class Cliente
     public static function find($id)
     {
         $stmt = db()->prepare("SELECT * FROM clientes WHERE id = :id LIMIT 1");
-        $stmt->execute([':id' => $id]);
+        $stmt->execute([':id' => (int)$id]);
         return $stmt->fetch();
     }
 
@@ -167,35 +151,18 @@ class Cliente
             ':estado' => $data['estado'] ?? null,
             ':cep' => $data['cep'] ?? null,
             ':observacoes' => $data['observacoes'] ?? null,
-            ':id' => $id
+            ':id' => (int)$id
         ]);
     }
 
-    /* =====================================================
-       DELETE SEGURO
-    ===================================================== */
-
     public static function delete($id)
     {
-        $pdo = db();
-
-        try {
-            $pdo->beginTransaction();
-
-            $stmt = $pdo->prepare("DELETE FROM clientes WHERE id = :id");
-            $stmt->execute([':id' => $id]);
-
-            $pdo->commit();
-            return true;
-
-        } catch (Exception $e) {
-            if ($pdo->inTransaction()) $pdo->rollBack();
-            return false;
-        }
+        $stmt = db()->prepare("DELETE FROM clientes WHERE id = :id");
+        return $stmt->execute([':id' => (int)$id]);
     }
 
     /* =====================================================
-       SERVIÇOS DO CLIENTE
+       SERVIÇOS
     ===================================================== */
 
     public static function getServicos($clienteId)
@@ -206,7 +173,7 @@ class Cliente
             JOIN servicos s ON s.id = cs.servico_id
             WHERE cs.cliente_id = :cliente
         ");
-        $stmt->execute([':cliente' => $clienteId]);
+        $stmt->execute([':cliente' => (int)$clienteId]);
         return $stmt->fetchAll();
     }
 
@@ -218,71 +185,78 @@ class Cliente
             VALUES (:cliente, :servico, 1)
         ");
         $stmt->execute([
-            ':cliente' => $clienteId,
-            ':servico' => $servicoId
+            ':cliente' => (int)$clienteId,
+            ':servico' => (int)$servicoId
         ]);
     }
 
     public static function toggleServico($id)
     {
-        db()->query("UPDATE clientes_servicos 
-                     SET ativo = NOT ativo 
-                     WHERE id = " . (int)$id);
+        db()->query("UPDATE clientes_servicos SET ativo = NOT ativo WHERE id = " . (int)$id);
     }
 
     public static function removeServico($id)
     {
-        db()->query("DELETE FROM clientes_servicos 
-                     WHERE id = " . (int)$id);
+        db()->query("DELETE FROM clientes_servicos WHERE id = " . (int)$id);
     }
 
     /* =====================================================
-       GERAR OS AUTOMÁTICA
+       CRM - ARQUIVOS
     ===================================================== */
 
-    public static function gerarOrdemServicoAutomatica($clienteId, $servicoId, $usuarioId)
+    public static function arquivos($clienteId)
     {
-        $pdo = db();
+        $stmt = db()->prepare("
+            SELECT * FROM cliente_arquivos
+            WHERE cliente_id = :id
+            ORDER BY criado_em DESC
+        ");
+        $stmt->execute([':id' => (int)$clienteId]);
+        return $stmt->fetchAll();
+    }
 
-        $servico = $pdo->prepare("SELECT * FROM servicos WHERE id = :id");
-        $servico->execute([':id' => $servicoId]);
-        $servico = $servico->fetch();
-
-        if (!$servico) return false;
-
-        $numero = 'OS-' . date('YmdHis') . '-' . rand(100,999);
-
-        $stmt = $pdo->prepare("
-            INSERT INTO ordens_servico
-            (numero, cliente_id, usuario_id, data_abertura, status,
-             valor_total, valor_final)
-            VALUES
-            (:numero, :cliente, :usuario, CURDATE(), 'aberta',
-             :valor, :valor)
+    public static function addArquivo($clienteId, $nome, $descricao, $caminho)
+    {
+        $stmt = db()->prepare("
+            INSERT INTO cliente_arquivos
+            (cliente_id, nome_arquivo, descricao, caminho)
+            VALUES (:cliente_id, :nome, :descricao, :caminho)
         ");
 
-        $stmt->execute([
-            ':numero' => $numero,
-            ':cliente' => $clienteId,
-            ':usuario' => $usuarioId,
-            ':valor' => $servico['preco_venda']
+        return $stmt->execute([
+            ':cliente_id' => (int)$clienteId,
+            ':nome' => $nome,
+            ':descricao' => $descricao,
+            ':caminho' => $caminho
         ]);
+    }
 
-        $ordemId = $pdo->lastInsertId();
+    /* =====================================================
+       CRM - COMENTÁRIOS
+    ===================================================== */
 
-        $stmt = $pdo->prepare("
-            INSERT INTO itens_ordem
-            (ordem_id, servico_id, quantidade, preco_unitario, subtotal)
-            VALUES
-            (:ordem, :servico, 1, :preco, :preco)
+    public static function comentarios($clienteId)
+    {
+        $stmt = db()->prepare("
+            SELECT * FROM cliente_comentarios
+            WHERE cliente_id = :id
+            ORDER BY criado_em DESC
+        ");
+        $stmt->execute([':id' => (int)$clienteId]);
+        return $stmt->fetchAll();
+    }
+
+    public static function addComentario($clienteId, $comentario)
+    {
+        $stmt = db()->prepare("
+            INSERT INTO cliente_comentarios
+            (cliente_id, comentario)
+            VALUES (:cliente_id, :comentario)
         ");
 
-        $stmt->execute([
-            ':ordem' => $ordemId,
-            ':servico' => $servicoId,
-            ':preco' => $servico['preco_venda']
+        return $stmt->execute([
+            ':cliente_id' => (int)$clienteId,
+            ':comentario' => $comentario
         ]);
-
-        return true;
     }
 }

@@ -7,7 +7,8 @@
   </div>
 
   <div class="actions">
-    <a class="btn btn--green" href="?r=servicos_novo">
+    <!-- Corrigido: rota correta -->
+    <a class="btn btn--green" href="/?r=servicos_create">
       <i class="fa-solid fa-plus"></i> Novo
     </a>
   </div>
@@ -122,17 +123,22 @@
                 <?php endif; ?>
               </td>
 
-              <td class="td-actions">
-                <a class="btn btn--ghost" href="?r=servicos_editar&id=<?= (int)$s['id'] ?>" title="Editar">
+              <td class="td-actions" style="display:flex; gap:6px; align-items:center;">
+                <!-- Corrigido: rota correta -->
+                <a class="btn btn--ghost" href="/?r=servicos_edit&id=<?= (int)$s['id'] ?>" title="Editar">
                   <i class="fa-solid fa-pen-to-square"></i>
                 </a>
 
-                <a class="btn btn--ghost"
-                   href="?r=servicos_delete&id=<?= (int)$s['id'] ?>"
-                   data-confirm="Deseja excluir este item? Essa ação não pode ser desfeita."
-                   title="Excluir">
-                  <i class="fa-solid fa-trash"></i>
-                </a>
+                <!-- Corrigido: delete é POST, então virou form (mantém o botão visual) -->
+                <form method="post" action="/?r=servicos_delete" style="display:inline;">
+                  <input type="hidden" name="id" value="<?= (int)$s['id'] ?>">
+                  <button class="btn btn--ghost"
+                          type="submit"
+                          data-confirm="Deseja excluir este item? Essa ação não pode ser desfeita."
+                          title="Excluir">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
               </td>
             </tr>
           <?php endforeach; ?>

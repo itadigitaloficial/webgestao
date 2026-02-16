@@ -89,53 +89,115 @@ class Servico
         return $stmt->fetch();
     }
 
+    /* =====================================================
+       CREATE COMPLETO PROFISSIONAL
+    ===================================================== */
+
     public static function create($data)
     {
         $sql = "INSERT INTO servicos
-                (categoria_id, nome, descricao, tipo, preco_venda, preco_custo, estoque, unidade, ativo)
-                VALUES
-                (:categoria_id, :nome, :descricao, :tipo, :preco_venda, :preco_custo, :estoque, :unidade, :ativo)";
+        (
+            categoria_id, codigo, codigo_barras,
+            nome, descricao, tipo,
+            preco_venda, preco_promocional, preco_custo,
+            margem_lucro, comissao, imposto_percentual,
+            estoque, estoque_minimo, unidade,
+            tempo_execucao, garantia_dias,
+            fornecedor, observacoes,
+            permite_sem_estoque, ativo
+        )
+        VALUES
+        (
+            :categoria_id, :codigo, :codigo_barras,
+            :nome, :descricao, :tipo,
+            :preco_venda, :preco_promocional, :preco_custo,
+            :margem_lucro, :comissao, :imposto_percentual,
+            :estoque, :estoque_minimo, :unidade,
+            :tempo_execucao, :garantia_dias,
+            :fornecedor, :observacoes,
+            :permite_sem_estoque, :ativo
+        )";
 
         $stmt = db()->prepare($sql);
 
         return $stmt->execute([
             ':categoria_id' => $data['categoria_id'] !== '' ? (int)$data['categoria_id'] : null,
+            ':codigo' => $data['codigo'] ?? null,
+            ':codigo_barras' => $data['codigo_barras'] ?? null,
             ':nome' => $data['nome'],
             ':descricao' => $data['descricao'],
             ':tipo' => $data['tipo'],
             ':preco_venda' => $data['preco_venda'],
+            ':preco_promocional' => $data['preco_promocional'] !== '' ? $data['preco_promocional'] : null,
             ':preco_custo' => $data['preco_custo'],
+            ':margem_lucro' => $data['margem_lucro'] !== '' ? $data['margem_lucro'] : null,
+            ':comissao' => $data['comissao'] !== '' ? $data['comissao'] : null,
+            ':imposto_percentual' => $data['imposto_percentual'] !== '' ? $data['imposto_percentual'] : null,
             ':estoque' => (int)$data['estoque'],
+            ':estoque_minimo' => $data['estoque_minimo'] !== '' ? (int)$data['estoque_minimo'] : null,
             ':unidade' => $data['unidade'],
+            ':tempo_execucao' => $data['tempo_execucao'] !== '' ? (int)$data['tempo_execucao'] : null,
+            ':garantia_dias' => $data['garantia_dias'] !== '' ? (int)$data['garantia_dias'] : null,
+            ':fornecedor' => $data['fornecedor'] ?? null,
+            ':observacoes' => $data['observacoes'] ?? null,
+            ':permite_sem_estoque' => isset($data['permite_sem_estoque']) ? 1 : 0,
             ':ativo' => (int)$data['ativo'],
         ]);
     }
 
+    /* =====================================================
+       UPDATE COMPLETO PROFISSIONAL
+    ===================================================== */
+
     public static function update($id, $data)
     {
         $sql = "UPDATE servicos SET
-                categoria_id = :categoria_id,
-                nome = :nome,
-                descricao = :descricao,
-                tipo = :tipo,
-                preco_venda = :preco_venda,
-                preco_custo = :preco_custo,
-                estoque = :estoque,
-                unidade = :unidade,
-                ativo = :ativo
-                WHERE id = :id";
+            categoria_id = :categoria_id,
+            codigo = :codigo,
+            codigo_barras = :codigo_barras,
+            nome = :nome,
+            descricao = :descricao,
+            tipo = :tipo,
+            preco_venda = :preco_venda,
+            preco_promocional = :preco_promocional,
+            preco_custo = :preco_custo,
+            margem_lucro = :margem_lucro,
+            comissao = :comissao,
+            imposto_percentual = :imposto_percentual,
+            estoque = :estoque,
+            estoque_minimo = :estoque_minimo,
+            unidade = :unidade,
+            tempo_execucao = :tempo_execucao,
+            garantia_dias = :garantia_dias,
+            fornecedor = :fornecedor,
+            observacoes = :observacoes,
+            permite_sem_estoque = :permite_sem_estoque,
+            ativo = :ativo
+        WHERE id = :id";
 
         $stmt = db()->prepare($sql);
 
         return $stmt->execute([
             ':categoria_id' => $data['categoria_id'] !== '' ? (int)$data['categoria_id'] : null,
+            ':codigo' => $data['codigo'] ?? null,
+            ':codigo_barras' => $data['codigo_barras'] ?? null,
             ':nome' => $data['nome'],
             ':descricao' => $data['descricao'],
             ':tipo' => $data['tipo'],
             ':preco_venda' => $data['preco_venda'],
+            ':preco_promocional' => $data['preco_promocional'] !== '' ? $data['preco_promocional'] : null,
             ':preco_custo' => $data['preco_custo'],
+            ':margem_lucro' => $data['margem_lucro'] !== '' ? $data['margem_lucro'] : null,
+            ':comissao' => $data['comissao'] !== '' ? $data['comissao'] : null,
+            ':imposto_percentual' => $data['imposto_percentual'] !== '' ? $data['imposto_percentual'] : null,
             ':estoque' => (int)$data['estoque'],
+            ':estoque_minimo' => $data['estoque_minimo'] !== '' ? (int)$data['estoque_minimo'] : null,
             ':unidade' => $data['unidade'],
+            ':tempo_execucao' => $data['tempo_execucao'] !== '' ? (int)$data['tempo_execucao'] : null,
+            ':garantia_dias' => $data['garantia_dias'] !== '' ? (int)$data['garantia_dias'] : null,
+            ':fornecedor' => $data['fornecedor'] ?? null,
+            ':observacoes' => $data['observacoes'] ?? null,
+            ':permite_sem_estoque' => isset($data['permite_sem_estoque']) ? 1 : 0,
             ':ativo' => (int)$data['ativo'],
             ':id' => (int)$id,
         ]);

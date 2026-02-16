@@ -15,7 +15,7 @@ require_once __DIR__ . '/app/controllers/FinanceiroController.php';
 require_once __DIR__ . '/app/controllers/AuthController.php';
 
 /* ===========================
-   ROUTER
+   ROUTER INIT
 =========================== */
 
 $router = new Router();
@@ -47,10 +47,18 @@ $router->get('clientes_edit', fn() => ClientesController::edit());
 $router->post('clientes_update', fn() => ClientesController::update());
 $router->post('clientes_delete', fn() => ClientesController::delete());
 
+/* ----- SERVIÇOS DO CLIENTE ----- */
+
 $router->get('clientes_servicos', fn() => ClientesController::servicos());
 $router->post('clientes_add_servico', fn() => ClientesController::addServico());
 $router->get('clientes_toggle_servico', fn() => ClientesController::toggleServico());
 $router->get('clientes_remove_servico', fn() => ClientesController::removeServico());
+
+/* ----- CRM CLIENTE (NOVO) ----- */
+
+$router->get('clientes_view', fn() => ClientesController::view());
+$router->post('clientes_add_comentario', fn() => ClientesController::addComentario());
+$router->post('clientes_upload_arquivo', fn() => ClientesController::uploadArquivo());
 
 /* ===========================
    SERVIÇOS

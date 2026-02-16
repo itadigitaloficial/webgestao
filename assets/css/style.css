@@ -565,3 +565,129 @@ textarea:focus{border-color: rgba(124,58,237,.55); box-shadow: var(--focus)}
 .dot{
   width:10px;height:10px;border-radius:999px;display:inline-block;
 }
+/* =========================================
+   UPGRADE VISUAL FORM ENTERPRISE PRO
+========================================= */
+
+/* Tabs modernas */
+.tabs{
+  display:flex;
+  gap:10px;
+  padding:6px;
+  background: rgba(255,255,255,.03);
+  border:1px solid var(--stroke);
+  border-radius:16px;
+  margin-bottom:18px;
+}
+
+.tab{
+  flex:1;
+  padding:10px 14px;
+  border-radius:12px;
+  border:none;
+  background: transparent;
+  color:var(--muted);
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.tab:hover{
+  background: rgba(255,255,255,.05);
+  color:var(--text);
+}
+
+.tab.active{
+  background: linear-gradient(135deg, rgba(124,58,237,.25), rgba(16,185,129,.15));
+  color:var(--text);
+  box-shadow: 0 6px 20px rgba(124,58,237,.25);
+}
+
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Melhor espaçamento interno */
+.form-card.enterprise{
+  padding:28px;
+}
+
+/* Seções com mais respiro */
+.form-section{
+  padding:18px;
+  border-radius:22px;
+  background: rgba(0,0,0,.18);
+}
+
+/* Melhor grid spacing */
+.form-grid{
+  gap:18px;
+}
+
+/* Inputs mais premium */
+.input-group input,
+textarea,
+.select-inset{
+  height:48px;
+  font-size:14px;
+  transition:.2s ease;
+}
+
+textarea{
+  min-height:110px;
+  padding:14px;
+}
+
+.input-group input:hover,
+textarea:hover{
+  border-color: rgba(124,58,237,.35);
+}
+
+/* Ícones melhor alinhados */
+.input-group i{
+  font-size:14px;
+  opacity:.8;
+}
+
+/* Toggle mais bonito */
+.toggle__ui{
+  box-shadow: inset 0 0 8px rgba(0,0,0,.4);
+}
+
+/* Botão salvar mais impactante */
+.form-footer{
+  margin-top:10px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+.btn--primary{
+  padding:14px 22px;
+  font-weight:700;
+  letter-spacing:.3px;
+  border-radius:16px;
+}
+
+.btn--primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 25px 60px rgba(124,58,237,.35);
+}
+
+/* Melhor alinhamento geral */
+.form-body{
+  gap:22px;
+}
+
+/* Inputs com glow suave */
+.input-group input:focus,
+textarea:focus{
+  box-shadow:
+    0 0 0 3px rgba(124,58,237,.20),
+    0 6px 25px rgba(124,58,237,.15);
+}
+
+/* Responsivo melhorado */
+@media (max-width: 720px){
+  .tabs{
+    flex-direction:column;
+  }
+}
