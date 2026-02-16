@@ -1,0 +1,279 @@
+[15-Feb-2026 21:28:13 America/Sao_Paulo] PHP Warning:  require_once(/home2/itaweb64/web.itadigital.com.br/../app/config/config.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/index.php on line 4
+[15-Feb-2026 21:28:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/../app/config/config.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/index.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 4
+[15-Feb-2026 21:30:12 America/Sao_Paulo] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home2/itaweb64/web.itadigital.com.br/app/core/Csrf.php on line 3
+[15-Feb-2026 21:30:24 America/Sao_Paulo] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home2/itaweb64/web.itadigital.com.br/app/core/Csrf.php on line 3
+[15-Feb-2026 21:35:49 America/Sao_Paulo] PHP Fatal error:  strict_types declaration must be the very first statement in the script in /home2/itaweb64/web.itadigital.com.br/app/core/Csrf.php on line 3
+[15-Feb-2026 22:01:27 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:01:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:08 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:08 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:09 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:09 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:10 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:10 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:11 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:11 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:14 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:14 America/Sao_Paulo] PHP Warning:  Undefined variable $router in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home2/itaweb64/web.itadigital.com.br/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 15
+[15-Feb-2026 22:02:41 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home2/itaweb64/web.itadigital.com.br/app/models/Cliente.php:20
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/models/Cliente.php(20): PDOStatement->execute()
+#1 /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php(16): Cliente::paginate()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(41): ClientesController::index()
+#3 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#4 /home2/itaweb64/web.itadigital.com.br/index.php(70): Router->run()
+#5 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/models/Cliente.php on line 20
+[15-Feb-2026 22:02:47 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home2/itaweb64/web.itadigital.com.br/app/models/Cliente.php:20
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/models/Cliente.php(20): PDOStatement->execute()
+#1 /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php(16): Cliente::paginate()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(41): ClientesController::index()
+#3 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#4 /home2/itaweb64/web.itadigital.com.br/index.php(70): Router->run()
+#5 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/models/Cliente.php on line 20
+[15-Feb-2026 22:42:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method ClientesController::create() in /home2/itaweb64/web.itadigital.com.br/index.php:42
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(70): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 42
+[15-Feb-2026 22:42:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method ClientesController::create() in /home2/itaweb64/web.itadigital.com.br/index.php:42
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(70): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 42
+[15-Feb-2026 22:49:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:52
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(41): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(70): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 52
+[15-Feb-2026 22:49:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:52
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(41): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(70): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 52
+[15-Feb-2026 22:57:56 America/Sao_Paulo] PHP Warning:  require_once(/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:57:56 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php:5
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(10): require_once()
+#1 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:38 America/Sao_Paulo] PHP Warning:  require_once(/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:38 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php:5
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(10): require_once()
+#1 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:39 America/Sao_Paulo] PHP Warning:  require_once(/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:39 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php:5
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(10): require_once()
+#1 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:43 America/Sao_Paulo] PHP Warning:  require_once(/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:43 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php:5
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(10): require_once()
+#1 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:46 America/Sao_Paulo] PHP Warning:  require_once(/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 22:59:46 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../models/Servico.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php:5
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(10): require_once()
+#1 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ServicosController.php on line 5
+[15-Feb-2026 23:01:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:52
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(28): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(58): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 52
+[15-Feb-2026 23:02:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:52
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(28): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(58): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 52
+[16-Feb-2026 13:56:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method ClientesController::create() in /home2/itaweb64/web.itadigital.com.br/index.php:47
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(93): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 47
+[16-Feb-2026 13:56:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method ClientesController::create() in /home2/itaweb64/web.itadigital.com.br/index.php:47
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(93): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 47
+[16-Feb-2026 13:58:02 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 191 in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 196
+[16-Feb-2026 13:58:05 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 191 in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 196
+[16-Feb-2026 13:58:08 America/Sao_Paulo] PHP Parse error:  Unclosed '{' on line 191 in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 196
+[16-Feb-2026 15:49:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method ClientesController::index() in /home2/itaweb64/web.itadigital.com.br/index.php:32
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 32
+[16-Feb-2026 15:49:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method ClientesController::index() in /home2/itaweb64/web.itadigital.com.br/index.php:32
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 32
+[16-Feb-2026 15:49:38 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServicoController::index() in /home2/itaweb64/web.itadigital.com.br/index.php:58
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 58
+[16-Feb-2026 15:51:54 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServicoController::index() in /home2/itaweb64/web.itadigital.com.br/index.php:58
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 58
+[16-Feb-2026 15:51:57 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:36
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(32): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 36
+[16-Feb-2026 15:51:59 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:36
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(32): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 36
+[16-Feb-2026 15:52:00 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Cliente::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php:36
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(32): ClientesController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/ClientesController.php on line 36
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "total_servicos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 36
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "servicos_ativos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 41
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "total_servicos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 36
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "servicos_ativos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 41
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "total_servicos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 36
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "servicos_ativos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 41
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "total_servicos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 36
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "servicos_ativos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 41
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "total_servicos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 36
+[16-Feb-2026 15:54:40 America/Sao_Paulo] PHP Warning:  Undefined array key "servicos_ativos" in /home2/itaweb64/web.itadigital.com.br/app/views/clientes/index.php on line 41
+[16-Feb-2026 15:56:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServicoController::index() in /home2/itaweb64/web.itadigital.com.br/index.php:58
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 58
+[16-Feb-2026 15:59:51 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServicoController::index() in /home2/itaweb64/web.itadigital.com.br/index.php:58
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(83): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 58
+[16-Feb-2026 16:03:54 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServico::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php:39
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(70): OrdemServicoController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 39
+[16-Feb-2026 16:04:01 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServico::paginate() in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php:39
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(70): OrdemServicoController::index()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 39
+[16-Feb-2026 16:07:05 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:07:05 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:07:05 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php:74
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(74): OrdemServicoController::detalhe()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:07:07 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:07:07 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:07:07 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php:74
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(74): OrdemServicoController::detalhe()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:08:12 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:08:12 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:08:12 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php:74
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(74): OrdemServicoController::detalhe()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:09:26 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:09:26 America/Sao_Paulo] PHP Warning:  require(/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php): Failed to open stream: No such file or directory in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:09:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/itaweb64/web.itadigital.com.br/app/controllers/../views/os/detalhe.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php:74
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/index.php(74): OrdemServicoController::detalhe()
+#1 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#2 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#3 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php on line 74
+[16-Feb-2026 16:12:35 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home2/itaweb64/web.itadigital.com.br/app/models/OrdemServico.php:230
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/models/OrdemServico.php(230): PDOStatement->execute()
+#1 /home2/itaweb64/web.itadigital.com.br/app/models/OrdemServico.php(201): OrdemServico::recalcularTotais()
+#2 /home2/itaweb64/web.itadigital.com.br/app/controllers/OrdemServicoController.php(122): OrdemServico::addItem()
+#3 /home2/itaweb64/web.itadigital.com.br/index.php(75): OrdemServicoController::addItem()
+#4 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#5 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#6 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/app/models/OrdemServico.php on line 230
+[16-Feb-2026 16:25:07 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method OrdemServicoController::detalhe() in /home2/itaweb64/web.itadigital.com.br/index.php:74
+Stack trace:
+#0 /home2/itaweb64/web.itadigital.com.br/app/core/Router.php(20): {closure}()
+#1 /home2/itaweb64/web.itadigital.com.br/index.php(92): Router->run()
+#2 {main}
+  thrown in /home2/itaweb64/web.itadigital.com.br/index.php on line 74
